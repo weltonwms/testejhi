@@ -1,13 +1,22 @@
-<jhi-page-ribbon></jhi-page-ribbon>
-
-<div>
-  <router-outlet name="navbar"></router-outlet>
-</div>
-
-<div class="container-fluid">
-  <div class="card jh-card">
-    <router-outlet></router-outlet>
+<div class="app-wrapper">
+  <div class="app-header">
+    <jhi-navbar></jhi-navbar>
   </div>
 
-  <jhi-footer></jhi-footer>
+  <div class="app-sidebar">
+    <jhi-sidebar></jhi-sidebar>
+  </div>
+
+  <main class="app-main">
+    <div class="app-content">
+      <!--begin::Container-->
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </main>
+
+  <div class="app-footer">
+    <jhi-footer></jhi-footer>
+  </div>
 </div>
